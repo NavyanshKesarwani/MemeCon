@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="422dp"
+        android:layout_height="104dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/headerbg" />
+
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="225dp"
+        android:layout_height="56dp"
+        android:fontFamily="@font/ubuntu_bold_italic"
+        android:text="MemeCon"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="46dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/memeborder"
+        android:layout_width="359dp"
+        android:layout_height="317dp"
+        android:layout_marginTop="157dp"
+        android:layout_marginBottom="181dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.532"
+        app:srcCompat="@drawable/memearea" />
+
+    <ImageView
+        android:id="@+id/meme"
+        android:layout_width="330dp"
+        android:layout_height="290dp"
+        app:layout_constraintBottom_toBottomOf="@+id/memeborder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/memeborder"
+        app:layout_constraintVertical_bias="0.518"
+        app:srcCompat="@drawable/memeareaother" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="70dp"
+        android:layout_height="59dp"
+        android:theme="@style/blueTheme"
+        app:layout_constraintBottom_toBottomOf="@+id/meme"
+        app:layout_constraintEnd_toEndOf="@+id/meme"
+        app:layout_constraintStart_toStartOf="@+id/meme"
+        app:layout_constraintTop_toTopOf="@+id/meme" />
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/footer" />
+
+    <ImageButton
+        android:id="@+id/share"
+        android:layout_width="166dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="55dp"
+        android:background="@android:drawable/dialog_holo_light_frame"
+        android:foreground="?android:attr/selectableItemBackgroundBorderless"
+        android:onClick="shareMeme"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/memeborder"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/sharebutton" />
+
+    <ImageButton
+        android:id="@+id/download"
+        android:layout_width="165dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginBottom="55dp"
+        android:backgroundTint="#00FFFFFF"
+        android:background="@android:drawable/dialog_holo_light_frame"
+        android:foreground="?android:attr/selectableItemBackgroundBorderless"
+        android:onClick="memeDownload"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/share"
+        app:layout_constraintHorizontal_bias="0.173"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/memeborder"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/download" />
+
+    <ImageView
+        android:id="@+id/info"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:srcCompat="@drawable/info" />
+
+    <TextView
+        android:id="@+id/footer_desc"
+        android:layout_width="336dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/ubuntu"
+        android:text="Swipe Anywhere For Next Meme"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.257"
+        app:layout_constraintStart_toEndOf="@+id/info"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.75" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
